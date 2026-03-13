@@ -1,5 +1,10 @@
 # MAXBRIDGE
 
+[![CI](https://github.com/emitlian/maxbridge/actions/workflows/ci.yml/badge.svg)](https://github.com/emitlian/maxbridge/actions/workflows/ci.yml)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-2ea44f.svg)](LICENSE)
+[![Stability Model](https://img.shields.io/badge/stability-stable%20core%20%2B%20experimental%20adapter-0A66C2.svg)](#stability-model)
+
 MAXBRIDGE is a local-first interoperability client and sync toolkit for MAX with Telegram forum mirroring, archive import/export, and an owner-only Telegram bot control plane.
 
 Runtime baseline: Python 3.11+.
@@ -241,6 +246,15 @@ maxbridge list-chats --config config.toml
 maxbridge telegram run-bot --config config.toml
 ```
 
+## Issues And Contributions
+
+MAXBRIDGE uses GitHub issue forms for the first round of triage and a lightweight contribution checklist for pull requests.
+
+- use the issue template for reproducible bugs, bridge regressions, storage issues, or documentation gaps
+- read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request
+- keep the stable core and experimental adapter boundary explicit in code, docs, and tests
+- avoid features that change the project into bulk messaging, hidden automation, or unauthorized account control
+
 ## Python Support
 
 - baseline runtime: Python 3.11+
@@ -409,4 +423,4 @@ Contributions are welcome, especially around:
 - Telegram UX and control-plane hardening;
 - docs and examples.
 
-See [docs/index.md](docs/index.md) for documentation entry points.
+Start with [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/index.md](docs/index.md) for documentation entry points.

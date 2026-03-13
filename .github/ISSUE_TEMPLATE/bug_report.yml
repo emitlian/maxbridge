@@ -1,0 +1,103 @@
+name: Bug report
+description: Report a reproducible problem in the stable core or the experimental adapter layer.
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue.
+
+        Please keep the report focused on a reproducible problem in MAXBRIDGE. Remove secrets, tokens, private identifiers, and other sensitive information before submitting.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Select the part of the repository where the issue appears.
+      options:
+        - Config and CLI
+        - Storage and SQLite mappings
+        - Archive and replay
+        - Bridge manager and sync engine
+        - Telegram forum bridge
+        - Telegram control plane
+        - Experimental MAX adapter
+        - Documentation and examples
+    validations:
+      required: true
+  - type: dropdown
+    id: stability
+    attributes:
+      label: Stability boundary
+      description: Tell us whether the issue is in a stable area or in an explicitly experimental area.
+      options:
+        - Stable core
+        - Experimental adapter layer
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Describe the problem in one or two sentences.
+      placeholder: "Example: bridge sync creates a topic binding but does not persist the message mapping."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the exact commands, inputs, or actions needed to reproduce the issue.
+      placeholder: |
+        1. Run `maxbridge init --config config.toml`
+        2. Run `maxbridge bridge bind ...`
+        3. Run `maxbridge bridge start ...`
+        4. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Describe the behavior you expected to see.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Describe what actually happened.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include Python version, OS, install method, and any relevant adapter or Telegram mode details.
+      placeholder: |
+        Python 3.11.x
+        Windows 11 / Linux / macOS
+        Installed with `pip install -e ".[dev]"`
+        Mock adapter / experimental adapter
+        Telegram dry-run / real bot token
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or traceback
+      description: Paste relevant logs or stack traces. Remove secrets and private identifiers.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmation
+      options:
+        - label: I removed secrets, tokens, and private identifiers from this report.
+          required: true
+        - label: I confirmed that this issue is not a request for bulk messaging, hidden automation, or unauthorized account access.
+          required: true
+        - label: I checked the README and CONTRIBUTING guide before opening this issue.
+          required: true

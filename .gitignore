@@ -1,0 +1,14 @@
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+dist/
+build/
+site/
+var/
+exports/
+.env

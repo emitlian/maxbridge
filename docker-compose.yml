@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  maxbridge:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["maxbridge", "doctor", "--config", "/workspace/config.toml"]
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    environment:
+      PYTHONUNBUFFERED: "1"

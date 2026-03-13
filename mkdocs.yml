@@ -1,0 +1,12 @@
+site_name: MAXBRIDGE
+site_description: Local-first interoperability client and Telegram forum bridge toolkit for MAX.
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - Security: security.md
+  - Demo Storyboard: demo_storyboard.md
+  - OpenAI Application Letter: openai_application_letter.md
+  - OpenAI Application Short: openai_application_short.md
+  - OpenAI Application One-Liner: openai_application_oneliner.md

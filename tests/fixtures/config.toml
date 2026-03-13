@@ -1,0 +1,19 @@
+[core]
+session_name = "test"
+poll_interval_seconds = 1
+max_batch_size = 20
+
+[storage]
+database_path = "./var/test-maxbridge.db"
+
+[telegram]
+enabled = false
+owner_user_ids = [123456789]
+default_forum_chat_id = -1001234567890
+
+[bridge]
+enabled = true
+dry_run = true
+
+[experimental]
+max_adapter = "mock"

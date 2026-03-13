@@ -1,0 +1,26 @@
+[
+  {
+    "id": "event_sample_1",
+    "type": "message.new",
+    "chat_id": "chat_alpha",
+    "message": {
+      "id": "m900",
+      "chat_id": "chat_alpha",
+      "author_id": "user_alice",
+      "text": "Replay fixture message",
+      "created_at": "2026-03-13T10:00:00+00:00",
+      "media": [],
+      "reactions": [],
+      "is_system": false,
+      "metadata": {}
+    },
+    "actor": {
+      "id": "user_alice",
+      "username": "alice",
+      "display_name": "Alice Example",
+      "is_bot": false
+    },
+    "emitted_at": "2026-03-13T10:00:00+00:00",
+    "raw_payload": {}
+  }
+]
